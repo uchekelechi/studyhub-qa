@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 id="site-title">StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="students.html" data-test="nav-students">Students</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page-grid">
+      <section class="card" aria-label="welcome">
+        <h2>Welcome to StudyHub</h2>
+        <p>
+          This is a simple training website you can use to learn software testing and test automation.
+        </p>
+      </section>
+
+      <section class="card" aria-label="login">
+        <h2>Login</h2>
+        <form id="login-form" novalidate>
+          <div class="form-row">
+            <label for="login-email">Email</label>
+            <input
+              type="email"
+              id="login-email"
+              name="email"
+              placeholder="tester@example.com"
+              required
+            >
+          </div>
+          <div class="form-row">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              minlength="6"
+              required
+            >
+          </div>
+          <button type="submit" id="login-button">Login</button>
+          <p id="login-message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <section class="card" aria-label="info">
+      <h2>Test Ideas</h2>
+      <ul id="test-ideas">
+        <li>Verify login success and error messages.</li>
+        <li>Check navigation links open the correct page.</li>
+        <li>Assert that the page title and headers are displayed.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="modules">
+      <h2>Learning Modules</h2>
+      <ol>
+        <li>Introduction to software testing.</li>
+        <li>Manual testing basics.</li>
+        <li>Writing your first test cases.</li>
+        <li>Introduction to test automation.</li>
+        <li>Working with locators and selectors.</li>
+      </ol>
+    </section>
+
+    <section class="card" aria-label="roadmap">
+      <h2>Roadmap</h2>
+      <p>
+        Below is a simple roadmap for learners. You can use it to practice checking text, lists and section headings in automated tests.
+      </p>
+      <ul>
+        <li>Week 1: Fundamentals of QA.</li>
+        <li>Week 2: Web UI elements and basic interactions.</li>
+        <li>Week 3: Test automation tools overview.</li>
+        <li>Week 4: Build and run your own automated tests.</li>
+        <li>Week 5: Reporting and communicating test results.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="faq">
+      <h2>FAQ</h2>
+      <h3>Do I need coding experience?</h3>
+      <p>No, this course starts from the basics and introduces code step by step.</p>
+      <h3>Which tools will we use?</h3>
+      <p>We will start with browser developer tools and then move to a test automation framework.</p>
+      <h3>How much time should I reserve?</h3>
+      <p>Plan for 3–5 hours per week for practice and exercises.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

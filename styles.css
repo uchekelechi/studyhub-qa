@@ -1,0 +1,211 @@
+:root {
+  --primary: #1e88e5;
+  --primary-dark: #1565c0;
+  --bg: #f4f5fb;
+  --card-bg: #ffffff;
+  --text-main: #222222;
+  --text-muted: #555555;
+  --border: #e0e0e0;
+  --accent: #ffb300;
+  --radius: 8px;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --transition-fast: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #e3f2fd, #f4f5fb);
+  color: var(--text-main);
+}
+
+/* Header & navigation */
+header {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  color: white;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.header-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#site-title {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Layout */
+.page {
+  max-width: 960px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  margin-top: 0.15rem;
+  color: var(--text-muted);
+}
+
+/* Login form */
+.form-row {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+}
+
+button {
+  padding: 0.55rem 1.3rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-strong);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-soft);
+  opacity: 0.9;
+}
+
+/* Messages */
+.message {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Test ideas list */
+#test-ideas {
+  padding-left: 1.1rem;
+  margin-top: 0.35rem;
+}
+
+#test-ideas li {
+  margin-bottom: 0.25rem;
+}
+
+/* Table page */
+table {
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+  width: 100%;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+th,
+td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+thead {
+  background-color: #e3f2fd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.8rem 1rem 1.2rem;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="students.html" data-test="nav-students">Students</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="card">
+      <h2>Basic QA Quiz</h2>
+
+      <form id="quiz-form" novalidate>
+        <div class="form-row">
+          <label for="q1">1. What does QA stand for?</label>
+          <input type="text" id="q1" name="q1" placeholder="Your answer" required>
+        </div>
+
+        <div class="form-row">
+          <span>2. Which are types of testing? (select at least one)</span>
+          <label>
+            <input type="checkbox" name="q2" value="unit">
+            Unit testing
+          </label>
+          <label>
+            <input type="checkbox" name="q2" value="manual">
+            Manual testing
+          </label>
+          <label>
+            <input type="checkbox" name="q2" value="coffee">
+            Coffee testing
+          </label>
+        </div>
+
+        <div class="form-row">
+          <span>3. When should testing start in a project?</span>
+          <label>
+            <input type="radio" name="q3" value="early">
+            As early as possible
+          </label>
+          <label>
+            <input type="radio" name="q3" value="end">
+            Only at the end
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="q4">4. Any comments? (optional)</label>
+          <textarea id="q4" name="q4" rows="3"></textarea>
+        </div>
+
+        <button type="submit" id="submit-quiz">Submit quiz</button>
+        <p id="quiz-result" class="message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>
