@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 2: Form State & Validation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 2: Form State & Validation</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Form State & Validation</h2>
+      <p><strong>Learn:</strong> Managing form field validation and button disabled states based on user input.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Form validation on field changes</li>
+        <li>Submit button disabled until valid</li>
+        <li>Error messages appear/disappear</li>
+        <li>Form submission feedback</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <form id="state-form" novalidate>
+          <div class="form-row">
+            <label for="state-email">Email <span class="required">*</span></label>
+            <input type="email" id="state-email" data-test="state-email" placeholder="test@example.com" required>
+            <span id="email-error" class="error-message" style="display: none;" data-test="email-error"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="state-password">Password <span class="required">*</span></label>
+            <input type="password" id="state-password" data-test="state-password" minlength="8" required>
+            <span id="password-error" class="error-message" style="display: none;" data-test="password-error"></span>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <input type="checkbox" id="agree-terms" data-test="agree-terms" required>
+              I agree to the terms and conditions
+            </label>
+          </div>
+
+          <button type="submit" id="state-submit" data-test="state-submit" disabled>
+            Submit (Enable checkbox first)
+          </button>
+
+          <p id="form-message" class="message" aria-live="polite" data-test="form-message"></p>
+        </form>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test disabling:</strong> Form starts with submit button disabled</p>
+        <p style="font-size: 0.9rem;"><strong>Test enabling:</strong> Check the agreement checkbox to enable submit button</p>
+        <p style="font-size: 0.9rem;"><strong>Test validation:</strong> Try invalid emails, short passwords</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-1.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-3.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

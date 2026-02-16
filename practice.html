@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Practice Scenarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Practice Scenarios</h1>
+    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+      Choose a practice scenario to learn test automation patterns. Each scenario covers a specific testing challenge you'll encounter in real web applications.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+      
+      <!-- Scenario 1 -->
+      <a href="practice-1.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-1">
+        <h3>Scenario 1: Visibility & Waits</h3>
+        <p>Handle dynamically appearing elements and wait patterns</p>
+        <p style="color: var(--primary); font-weight: 500;">⏳ Learn waiting strategies</p>
+      </a>
+
+      <!-- Scenario 2 -->
+      <a href="practice-2.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-2">
+        <h3>Scenario 2: Form State & Validation</h3>
+        <p>Master form field validation and button states</p>
+        <p style="color: var(--primary); font-weight: 500;">✓ Form handling</p>
+      </a>
+
+      <!-- Scenario 3 -->
+      <a href="practice-3.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-3">
+        <h3>Scenario 3: Modal Interactions</h3>
+        <p>Test modal dialogs and overlays</p>
+        <p style="color: var(--primary); font-weight: 500;">🪟 Dialog testing</p>
+      </a>
+
+      <!-- Scenario 4 -->
+      <a href="practice-4.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-4">
+        <h3>Scenario 4: Dynamic Filtering</h3>
+        <p>Filter content across multiple columns</p>
+        <p style="color: var(--primary); font-weight: 500;">🔍 Search & filter</p>
+      </a>
+
+      <!-- Scenario 5 -->
+      <a href="practice-5.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-5">
+        <h3>Scenario 5: Async Operations</h3>
+        <p>Handle asynchronous operations and loading states</p>
+        <p style="color: var(--primary); font-weight: 500;">⚡ Async patterns</p>
+      </a>
+
+      <!-- Scenario 6 -->
+      <a href="practice-6.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-6">
+        <h3>Scenario 6: Sortable Tables</h3>
+        <p>Click headers to sort by different columns</p>
+        <p style="color: var(--primary); font-weight: 500;">📊 Table sorting</p>
+      </a>
+
+      <!-- Scenario 7 -->
+      <a href="practice-7.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-7">
+        <h3>Scenario 7: Pagination</h3>
+        <p>Navigate paginated content and update table</p>
+        <p style="color: var(--primary); font-weight: 500;">📄 Page navigation</p>
+      </a>
+
+      <!-- Scenario 8 -->
+      <a href="practice-8.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-8">
+        <h3>Scenario 8: Accordion & Tabs</h3>
+        <p>Expand/collapse sections and switch between tabs</p>
+        <p style="color: var(--primary); font-weight: 500;">📑 Content switching</p>
+      </a>
+
+      <!-- Scenario 9 -->
+      <a href="practice-9.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-9">
+        <h3>Scenario 9: Toast Notifications</h3>
+        <p>Test temporary dismissible notification messages</p>
+        <p style="color: var(--primary); font-weight: 500;">🔔 Notifications</p>
+      </a>
+
+      <!-- Scenario 10 -->
+      <a href="practice-10.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-10">
+        <h3>Scenario 10: Wizard Form</h3>
+        <p>Complete multi-step form with validation</p>
+        <p style="color: var(--primary); font-weight: 500;">🧙 Step-by-step forms</p>
+      </a>
+
+      <!-- Scenario 11 -->
+      <a href="practice-11.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-11">
+        <h3>Scenario 11: File Upload</h3>
+        <p>Handle file input with drag-drop and progress</p>
+        <p style="color: var(--primary); font-weight: 500;">📁 File handling</p>
+      </a>
+
+      <!-- Scenario 12 -->
+      <a href="practice-12.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-12">
+        <h3>Scenario 12: API Simulation</h3>
+        <p>Test dynamic data loading and error handling</p>
+        <p style="color: var(--primary); font-weight: 500;">🌐 API responses</p>
+      </a>
+
+      <!-- Scenario 13 -->
+      <a href="practice-13.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-13">
+        <h3>Scenario 13: Keyboard Navigation</h3>
+        <p>Handle arrow keys and keyboard shortcuts</p>
+        <p style="color: var(--primary); font-weight: 500;">⌨️ Keyboard events</p>
+      </a>
+
+      <!-- Scenario 14 -->
+      <a href="practice-14.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-14">
+        <h3>Scenario 14: Data Grid Actions</h3>
+        <p>Test row-level actions and status changes</p>
+        <p style="color: var(--primary); font-weight: 500;">⚙️ Row operations</p>
+      </a>
+
+      <!-- Quiz 1: Scenario 15 -->
+      <a href="practice-15.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-15">
+        <h3>Quiz 1: Visibility & Waits</h3>
+        <p>Test your knowledge on visibility patterns and waits</p>
+        <p style="color: var(--primary); font-weight: 500;">✅ 5 questions</p>
+      </a>
+
+      <!-- Quiz 2: Scenario 16 -->
+      <a href="practice-16.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-16">
+        <h3>Quiz 2: Form Handling</h3>
+        <p>Assess your skills in form validation and state management</p>
+        <p style="color: var(--primary); font-weight: 500;">✅ 5 questions</p>
+      </a>
+
+      <!-- Quiz 3: Scenario 17 -->
+      <a href="practice-17.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-17">
+        <h3>Quiz 3: Table Operations</h3>
+        <p>Challenge yourself with table sorting and filtering</p>
+        <p style="color: var(--primary); font-weight: 500;">✅ 5 questions</p>
+      </a>
+
+      <!-- Quiz 4: Scenario 18 -->
+      <a href="practice-18.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-18">
+        <h3>Quiz 4: UI Interactions</h3>
+        <p>Test your knowledge of modals, tabs, and notifications</p>
+        <p style="color: var(--primary); font-weight: 500;">✅ 5 questions</p>
+      </a>
+
+      <!-- Quiz 5: Scenario 19 -->
+      <a href="practice-19.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="scenario-19">
+        <h3>Quiz 5: Advanced Topics</h3>
+        <p>Master multi-step forms, file uploads, and API handling</p>
+        <p style="color: var(--primary); font-weight: 500;">✅ 5 questions</p>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>
+      

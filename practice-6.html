@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 6: Sortable Tables</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 6: Sortable Tables</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Sortable Table Headers</h2>
+      <p><strong>Learn:</strong> Testing table sorting by clicking column headers, verifying row order changes.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Click header to sort ascending</li>
+        <li>Click again to sort descending</li>
+        <li>Visual indicator shows sort direction</li>
+        <li>Works with text and numeric columns</li>
+        <li>Date fields sort chronologically</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <table id="scores-table" data-test="scores-table" class="sortable-table">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name" data-test="sort-name">Student <span class="sort-indicator"></span></th>
+              <th class="sortable" data-sort="score" data-test="sort-score">Score <span class="sort-indicator"></span></th>
+              <th class="sortable" data-sort="date" data-test="sort-date">Date <span class="sort-indicator"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-test="score-row-1">
+              <td>Alice</td>
+              <td>95</td>
+              <td>2026-02-10</td>
+            </tr>
+            <tr data-test="score-row-2">
+              <td>Zoe</td>
+              <td>87</td>
+              <td>2026-02-12</td>
+            </tr>
+            <tr data-test="score-row-3">
+              <td>Bob</td>
+              <td>92</td>
+              <td>2026-02-08</td>
+            </tr>
+            <tr data-test="score-row-4">
+              <td>Carol</td>
+              <td>88</td>
+              <td>2026-02-15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Text sorting:</strong> Click "Student" header → A-Z, then Z-A</p>
+        <p style="font-size: 0.9rem;"><strong>Numeric sorting:</strong> Click "Score" header → low to high, then high to low</p>
+        <p style="font-size: 0.9rem;"><strong>Date sorting:</strong> Click "Date" header → chronological order</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-5.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-7.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

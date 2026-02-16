@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Quiz 4: UI Interactions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Quiz 4: UI Interactions</h1>
+      <a href="quiz.html" class="btn-secondary" data-test="back-button">← Back to Quizzes</a>
+    </div>
+
+    <section class="card">
+      <h2>Modals, Async Operations, Tabs & Notifications</h2>
+      <p>Test your understanding of complex UI patterns. Related: <a href="practice-3.html">Scenario 3</a>, <a href="practice-5.html">Scenario 5</a>, <a href="practice-8.html">Scenario 8</a>, <a href="practice-9.html">Scenario 9</a></p>
+
+      <form id="quiz-form" novalidate style="margin-top: 1.5rem;">
+        
+        <div class="form-row">
+          <label><strong>1. How do you interact with elements inside a modal?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q1" value="same"> Same way as outside modal
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="special"> Need special modal-specific selectors
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="wait"> Wait for modal animation first
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>2. When testing async button operations, what's critical?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="checkbox" name="q2" value="disabled"> Button becomes disabled
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="loading"> Loading state visible
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="wait"> Wait appropriately
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="completion"> Verify completion state
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>3. How do you test tab switching functionality?</strong></label>
+          <textarea name="q3" placeholder="Explain tab switching tests..." rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label><strong>4. For toast notifications, what's challenging to test?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q4" value="timing"> Auto-dismiss timing
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="detect"> Detecting appearance
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="multiple"> Multiple toasts at once
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="all"> All of the above
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>5. Best practice for testing accordion expand/collapse?</strong></label>
+          <input type="text" name="q5" placeholder="Your approach..." required>
+        </div>
+
+        <button type="submit" class="btn-primary" style="margin-top: 1rem;">Submit Quiz</button>
+        <p id="quiz-message" class="message" aria-live="polite" style="margin-top: 1rem;"></p>
+      </form>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-17.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-19.html" class="btn-primary" style="text-decoration: none;">Next Quiz →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

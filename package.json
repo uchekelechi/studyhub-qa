@@ -1,0 +1,39 @@
+{
+  "name": "studyhub-qa",
+  "version": "1.0.0",
+  "description": "Interactive test automation learning platform for Cypress, Playwright, and RobotFramework",
+  "type": "module",
+  "author": "StudyHub Team",
+  "license": "MIT",
+  "keywords": [
+    "testing",
+    "qa",
+    "selenium",
+    "cypress",
+    "playwright",
+    "robotframework",
+    "automation",
+    "education",
+    "e2e"
+  ],
+  "scripts": {
+    "serve": "python -m http.server 8000 || npx http-server",
+    "serve:python3": "python3 -m http.server 8000",
+    "serve:node": "npx http-server",
+    "test": "echo \"See /docs for testing examples and patterns\"",
+    "lint-html": "npx html-validate *.html 2>/dev/null || echo 'HTML validator not installed. Run: npm install --save-dev html-validate'",
+    "format": "npx prettier --write '*.{js,css,html,json,md}' 2>/dev/null || echo 'Prettier not installed. Run: npm install --save-dev prettier'"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "html-validate": "^7.0.0"
+  },
+  "homepage": "https://github.com/yourname/studyhub-qa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/studyhub-qa"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 14: Data Grid Actions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 14: Data Grid Actions</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Data Grid with Row Actions</h2>
+      <p><strong>Learn:</strong> Testing row-level actions, status changes, confirmations, and dynamic updates.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Click action buttons in each row</li>
+        <li>Edit button triggers action/notification</li>
+        <li>Delete button shows confirmation</li>
+        <li>Click status to change it</li>
+        <li>Row updates without page reload</li>
+        <li>Multiple rows can be modified</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <table id="data-grid-table" data-test="data-grid-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="grid-body">
+            <tr data-test="row-task-1" data-row-id="1">
+              <td data-test="grid-name">Complete documentation</td>
+              <td><span class="status-badge pending" data-test="grid-status">Pending</span></td>
+              <td>
+                <button class="row-action" data-test="grid-edit">✏️ Edit</button>
+                <button class="row-action" data-test="grid-delete" style="background-color: #d32f2f;">🗑️ Delete</button>
+              </td>
+            </tr>
+            <tr data-test="row-task-2" data-row-id="2">
+              <td data-test="grid-name">Review code</td>
+              <td><span class="status-badge pending" data-test="grid-status">Pending</span></td>
+              <td>
+                <button class="row-action" data-test="grid-edit">✏️ Edit</button>
+                <button class="row-action" data-test="grid-delete" style="background-color: #d32f2f;">🗑️ Delete</button>
+              </td>
+            </tr>
+            <tr data-test="row-task-3" data-row-id="3">
+              <td data-test="grid-name">Deploy application</td>
+              <td><span class="status-badge pending" data-test="grid-status">Pending</span></td>
+              <td>
+                <button class="row-action" data-test="grid-edit">✏️ Edit</button>
+                <button class="row-action" data-test="grid-delete" style="background-color: #d32f2f;">🗑️ Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);"><em>💡 Tip: Click the status badge to cycle through: Pending → In Progress → Completed</em></p>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test edit:</strong> Click Edit button → verify notification</p>
+        <p style="font-size: 0.9rem;"><strong>Test delete:</strong> Click Delete → confirm action → verify row removed</p>
+        <p style="font-size: 0.9rem;"><strong>Test status:</strong> Click status badge → changes cycle through states</p>
+        <p style="font-size: 0.9rem;"><strong>Test multiple rows:</strong> Perform actions on different rows</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-13.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <button class="btn-secondary" disabled style="opacity: 0.5;">Next →</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

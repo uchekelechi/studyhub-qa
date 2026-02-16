@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 3: Modal Interactions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 3: Modal Interactions</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Modal Interactions</h2>
+      <p><strong>Learn:</strong> Opening/closing modals, interacting with content inside modals, waiting for modal visibility.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Modal starts hidden</li>
+        <li>Clicking button shows modal</li>
+        <li>Interact with form elements inside modal</li>
+        <li>Close button dismisses modal</li>
+        <li>Overlay click can close modal</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <button id="open-modal" class="btn-primary" data-test="open-modal">Open Settings</button>
+
+        <div id="modal-overlay" class="modal-overlay" style="display: none;" data-test="modal-overlay" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 id="modal-title">Settings</h3>
+              <button id="close-modal" class="modal-close" data-test="close-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="form-row">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select" data-test="theme-select">
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label>
+                  <input type="checkbox" id="notifications" data-test="notifications" checked>
+                  Enable notifications
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="modal-cancel" class="btn-secondary" data-test="modal-cancel">Cancel</button>
+              <button id="modal-save" class="btn-primary" data-test="modal-save">Save Settings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test opening:</strong> Click "Open Settings" button</p>
+        <p style="font-size: 0.9rem;"><strong>Test interaction:</strong> Change theme dropdown, toggle notifications checkbox</p>
+        <p style="font-size: 0.9rem;"><strong>Test closing:</strong> Click X button or Cancel</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-2.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-4.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 11: File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 11: File Upload</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>File Upload</h2>
+      <p><strong>Learn:</strong> Testing file input handling, drag-drop functionality, and upload progress.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Click upload zone to open file browser</li>
+        <li>Drag files over zone (optional)</li>
+        <li>Select valid files (PDF, TXT, etc.)</li>
+        <li>Progress bar shows upload simulating</li>
+        <li>Success message appears after completion</li>
+        <li>Invalid files are rejected</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <div id="upload-zone" class="upload-zone" data-test="upload-zone" style="border: 2px dashed var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; cursor: pointer; transition: background-color 0.2s;">
+          <p>📁 Drag files here or click to upload</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Allowed: PDF, TXT (max 5MB)</p>
+          <input type="file" id="file-input" data-test="file-input" accept=".pdf,.txt" style="display: none;">
+        </div>
+
+        <div id="upload-list" data-test="upload-list" style="margin-top: 1rem;"></div>
+
+        <div id="upload-progress" style="display: none; margin-top: 1rem;">
+          <div class="progress-bar" style="height: 6px;">
+            <div id="upload-bar" style="width: 0%; height: 100%; background: var(--primary); transition: width 0.3s;"></div>
+          </div>
+        </div>
+
+        <div id="upload-result" style="margin-top: 1rem; display: none;" class="success-state">
+          ✓ File uploaded successfully
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test file input:</strong> Click upload zone, select a file</p>
+        <p style="font-size: 0.9rem;"><strong>Test progress:</strong> Monitor progress bar during upload</p>
+        <p style="font-size: 0.9rem;"><strong>Test invalid file:</strong> Try uploading unsupported type</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-10.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-12.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

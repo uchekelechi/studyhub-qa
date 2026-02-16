@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>StudyHub - Quiz</title>
+  <title>StudyHub - Quiz Topics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
   <header>
@@ -14,7 +13,7 @@
       <nav>
         <ul>
           <li><a href="index.html" data-test="nav-home">Home</a></li>
-          <li><a href="students.html" data-test="nav-students">Students</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
           <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
         </ul>
       </nav>
@@ -22,52 +21,50 @@
   </header>
 
   <main class="page">
-    <section class="card">
-      <h2>Basic QA Quiz</h2>
+    <h1>Quiz Topics</h1>
+    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+      Test your knowledge of test automation concepts. Each quiz covers specific practice scenarios.
+    </p>
 
-      <form id="quiz-form" novalidate>
-        <div class="form-row">
-          <label for="q1">1. What does QA stand for?</label>
-          <input type="text" id="q1" name="q1" placeholder="Your answer" required>
-        </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+      
+      <!-- Quiz 1 -->
+      <a href="practice-15.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="quiz-1">
+        <h3>Quiz 1: Visibility & Waits</h3>
+        <p>Test your understanding of wait strategies and handling dynamic elements</p>
+        <p style="color: var(--primary); font-weight: 500;">⏳ 5 questions</p>
+      </a>
 
-        <div class="form-row">
-          <span>2. Which are types of testing? (select at least one)</span>
-          <label>
-            <input type="checkbox" name="q2" value="unit">
-            Unit testing
-          </label>
-          <label>
-            <input type="checkbox" name="q2" value="manual">
-            Manual testing
-          </label>
-          <label>
-            <input type="checkbox" name="q2" value="coffee">
-            Coffee testing
-          </label>
-        </div>
+      <!-- Quiz 2 -->
+      <a href="practice-16.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="quiz-2">
+        <h3>Quiz 2: Form Handling</h3>
+        <p>Validate your knowledge of form testing, validation, and state management</p>
+        <p style="color: var(--primary); font-weight: 500;">✓ 5 questions</p>
+      </a>
 
-        <div class="form-row">
-          <span>3. When should testing start in a project?</span>
-          <label>
-            <input type="radio" name="q3" value="early">
-            As early as possible
-          </label>
-          <label>
-            <input type="radio" name="q3" value="end">
-            Only at the end
-          </label>
-        </div>
+      <!-- Quiz 3 -->
+      <a href="practice-17.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="quiz-3">
+        <h3>Quiz 3: Table Operations</h3>
+        <p>Master table interactions, sorting, filtering, and pagination</p>
+        <p style="color: var(--primary); font-weight: 500;">📊 5 questions</p>
+      </a>
 
-        <div class="form-row">
-          <label for="q4">4. Any comments? (optional)</label>
-          <textarea id="q4" name="q4" rows="3"></textarea>
-        </div>
+      <!-- Quiz 4 -->
+      <a href="practice-18.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="quiz-4">
+        <h3>Quiz 4: UI Interactions</h3>
+        <p>Test knowledge of modals, async operations, tabs, and notifications</p>
+        <p style="color: var(--primary); font-weight: 500;">🎨 5 questions</p>
+      </a>
 
-        <button type="submit" id="submit-quiz">Submit quiz</button>
-        <p id="quiz-result" class="message" aria-live="polite"></p>
-      </form>
-    </section>
+      <!-- Quiz 5 -->
+      <a href="practice-19.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;" data-test="quiz-5">
+        <h3>Quiz 5: Advanced Topics</h3>
+        <p>Challenge yourself with keyboard handling, file uploads, and API testing</p>
+        <p style="color: var(--primary); font-weight: 500;">⚙️ 5 questions</p>
+      </a>
+
+    </div>
+
   </main>
 
   <footer>

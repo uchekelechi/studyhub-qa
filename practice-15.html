@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Quiz 1: Visibility & Waits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Quiz 1: Visibility & Waits</h1>
+      <a href="quiz.html" class="btn-secondary" data-test="back-button">← Back to Quizzes</a>
+    </div>
+
+    <section class="card">
+      <h2>Visibility & Wait Strategies</h2>
+      <p>Test your understanding of wait strategies and handling dynamic elements. Related: <a href="practice-1.html">Practice Scenario 1</a></p>
+
+      <form id="quiz-form" novalidate style="margin-top: 1.5rem;">
+        
+        <div class="form-row">
+          <label><strong>1. When should you use `cy.wait()` with a timeout in Cypress?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q1" value="always"> Always for every action
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="dynamic"> Only for dynamically appearing elements
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="network"> Only for network requests
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="never"> Never - use implicit waits
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>2. What's the best practice for waiting on elements?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="checkbox" name="q2" value="explicit"> Use explicit waits
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="retry"> Let the framework retry automatically
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="fixed"> Use fixed sleep() times
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="data-test"> Target elements with data-test attributes
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>3. What does "eventual consistency" mean in async testing?</strong></label>
+          <textarea name="q3" placeholder="Your answer..." rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label><strong>4. Which is the most reliable way to check if an element appears?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q4" value="visibility"> Check visibility with should('be.visible')
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="exists"> Just check if element exists
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="sleep"> Use sleep() before checking
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>5. In Playwright, what's the default timeout for waiting?</strong></label>
+          <input type="text" name="q5" placeholder="e.g., 30000ms" required>
+        </div>
+
+        <button type="submit" class="btn-primary" style="margin-top: 1rem;">Submit Quiz</button>
+        <p id="quiz-message" class="message" aria-live="polite" style="margin-top: 1rem;"></p>
+      </form>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <button class="btn-secondary" disabled style="opacity: 0.5;">← Previous</button>
+      <a href="practice-16.html" class="btn-primary" style="text-decoration: none;">Next Quiz →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

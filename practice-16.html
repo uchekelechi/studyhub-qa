@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Quiz 2: Form Handling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Quiz 2: Form Handling</h1>
+      <a href="quiz.html" class="btn-secondary" data-test="back-button">← Back to Quizzes</a>
+    </div>
+
+    <section class="card">
+      <h2>Form Testing & Validation</h2>
+      <p>Test your understanding of form validation, state management, and multi-step forms. Related: <a href="practice-2.html">Scenario 2</a>, <a href="practice-10.html">Scenario 10</a></p>
+
+      <form id="quiz-form" novalidate style="margin-top: 1.5rem;">
+        
+        <div class="form-row">
+          <label><strong>1. How can you test if a button is disabled?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q1" value="cypress"> cy.get('button').should('be.disabled')
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="playwright"> expect(button).toBeDisabled()
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="both"> Both are correct for their frameworks
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>2. What HTML5 attributes help with form validation?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="checkbox" name="q2" value="required"> required
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="minlength"> minlength
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="pattern"> pattern
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="validate"> validate attribute
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>3. In a multi-step wizard, what should you test for each step?</strong></label>
+          <textarea name="q3" placeholder="List validation points for wizard forms..." rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label><strong>4. How do you test form field validation errors?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q4" value="fill-submit"> Fill invalid data and check error message
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="observe"> Just observe what happens
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="clear"> Clear fields and check for errors
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>5. What's a good strategy for testing form reset functionality?</strong></label>
+          <input type="text" name="q5" placeholder="Your answer..." required>
+        </div>
+
+        <button type="submit" class="btn-primary" style="margin-top: 1rem;">Submit Quiz</button>
+        <p id="quiz-message" class="message" aria-live="polite" style="margin-top: 1rem;"></p>
+      </form>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-15.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-17.html" class="btn-primary" style="text-decoration: none;">Next Quiz →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

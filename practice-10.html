@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 10: Multi-Step Wizard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 10: Multi-Step Wizard</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Multi-Step Form Wizard</h2>
+      <p><strong>Learn:</strong> Testing multi-step forms with validation, progress tracking, and navigation.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Form displays step 1 initially</li>
+        <li>Fill required fields and click Next</li>
+        <li>Progress bar updates</li>
+        <li>Step indicators update</li>
+        <li>Previous button allows going back</li>
+        <li>Submit appears on final step</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <div id="wizard-progress" style="margin-bottom: 1.5rem;">
+          <div class="progress-bar" style="height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden;">
+            <div id="progress-fill" style="width: 20%; height: 100%; background: var(--primary); transition: width 0.3s;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.85rem;">
+            <span class="step-indicator active" data-test="step-1">Step 1</span>
+            <span class="step-indicator" data-test="step-2">Step 2</span>
+            <span class="step-indicator" data-test="step-3">Step 3</span>
+          </div>
+        </div>
+
+        <div id="wizard-form">
+          <div id="wizard-step-1" class="wizard-step">
+            <h4>Personal Information</h4>
+            <div class="form-row">
+              <label for="wizard-name">Full Name</label>
+              <input type="text" id="wizard-name" data-test="wizard-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-row">
+              <label for="wizard-email">Email</label>
+              <input type="email" id="wizard-email" data-test="wizard-email" placeholder="john@example.com" required>
+            </div>
+          </div>
+
+          <div id="wizard-step-2" class="wizard-step" style="display: none;">
+            <h4>Contact Details</h4>
+            <div class="form-row">
+              <label for="wizard-phone">Phone</label>
+              <input type="tel" id="wizard-phone" data-test="wizard-phone" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-row">
+              <label for="wizard-address">Address</label>
+              <input type="text" id="wizard-address" data-test="wizard-address" placeholder="123 Main St">
+            </div>
+          </div>
+
+          <div id="wizard-step-3" class="wizard-step" style="display: none;">
+            <h4>Preferences</h4>
+            <div class="form-row">
+              <label><input type="checkbox" id="wizard-marketing" data-test="wizard-marketing"> Subscribe to updates</label>
+            </div>
+            <div class="form-row">
+              <label for="wizard-role">Preferred Role</label>
+              <select id="wizard-role" data-test="wizard-role">
+                <option>QA Engineer</option>
+                <option>Developer</option>
+                <option>Manager</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.8rem; margin-top: 1.5rem;">
+            <button id="wizard-prev" class="btn-secondary" data-test="wizard-prev" style="display: none;">← Back</button>
+            <button id="wizard-next" class="btn-primary" data-test="wizard-next">Next →</button>
+            <button id="wizard-submit" class="btn-primary" data-test="wizard-submit" style="display: none;">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Complete the wizard:</strong> Fill each step and click Next</p>
+        <p style="font-size: 0.9rem;"><strong>Test validation:</strong> Try submitting without required fields</p>
+        <p style="font-size: 0.9rem;"><strong>Test navigation:</strong> Go back and forward between steps</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-9.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-11.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

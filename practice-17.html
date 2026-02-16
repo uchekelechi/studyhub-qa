@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Quiz 3: Table Operations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Quiz 3: Table Operations</h1>
+      <a href="quiz.html" class="btn-secondary" data-test="back-button">← Back to Quizzes</a>
+    </div>
+
+    <section class="card">
+      <h2>Table Testing: Filtering, Sorting & Pagination</h2>
+      <p>Test your understanding of table interactions. Related: <a href="practice-4.html">Scenario 4</a>, <a href="practice-6.html">Scenario 6</a>, <a href="practice-7.html">Scenario 7</a></p>
+
+      <form id="quiz-form" novalidate style="margin-top: 1.5rem;">
+        
+        <div class="form-row">
+          <label><strong>1. How do you find a specific row in a table by text content?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q1" value="filter"> cy.get('table tbody').contains('text').closest('tr')
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="query"> cy.get('table tr').filter(':contains("text")')
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q1" value="both"> Both approaches work
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>2. When testing table sorting, what should you verify?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="checkbox" name="q2" value="order"> Order of rows changed
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="direction"> Sort direction indicator updated
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="data"> Data is actually in correct order
+          </label>
+          <label style="display: block;">
+            <input type="checkbox" name="q2" value="all"> All of above
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>3. What's the challenge when testing pagination?</strong></label>
+          <textarea name="q3" placeholder="Explain pagination testing challenges..." rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label><strong>4. How do you handle numeric vs text sorting in tables?</strong></label>
+          <label style="display: block; margin-top: 0.5rem;">
+            <input type="radio" name="q4" value="same"> Same way - always alphabetic
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="different"> Different - need to convert to numbers
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="q4" value="depends"> Depends on implementation
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label><strong>5. Best practice for testing filtered results?</strong></label>
+          <input type="text" name="q5" placeholder="Your answer..." required>
+        </div>
+
+        <button type="submit" class="btn-primary" style="margin-top: 1rem;">Submit Quiz</button>
+        <p id="quiz-message" class="message" aria-live="polite" style="margin-top: 1rem;"></p>
+      </form>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-16.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-18.html" class="btn-primary" style="text-decoration: none;">Next Quiz →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

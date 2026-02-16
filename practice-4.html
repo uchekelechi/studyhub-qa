@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 4: Dynamic Filtering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 4: Dynamic Filtering</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Dynamic List & Multiple Filters</h2>
+      <p><strong>Learn:</strong> Filtering content across multiple columns, handling empty states, real-time updates.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Type in search field to filter by name</li>
+        <li>Select dropdown to filter by role</li>
+        <li>Combine multiple filters</li>
+        <li>Table updates in real-time</li>
+        <li>Reset button clears all filters</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <div class="filter-controls">
+          <div class="form-row">
+            <label for="member-search">Search by name</label>
+            <input type="text" id="member-search" data-test="member-search" placeholder="Type a name...">
+          </div>
+          <div class="form-row">
+            <label for="role-filter">Filter by role</label>
+            <select id="role-filter" data-test="role-filter">
+              <option value="">All Roles</option>
+              <option value="admin">Admin</option>
+              <option value="tester">Tester</option>
+              <option value="developer">Developer</option>
+            </select>
+          </div>
+          <button id="reset-filters" data-test="reset-filters">Reset Filters</button>
+        </div>
+
+        <table id="members-table" data-test="members-table">
+          <thead>
+            <tr>
+              <th data-test="th-name">Name</th>
+              <th data-test="th-role">Role</th>
+              <th data-test="th-status">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-test="member-row-1" data-name="alice" data-role="admin">
+              <td>Alice Chen</td>
+              <td>Admin</td>
+              <td><span class="status-badge active" data-test="status-active">Active</span></td>
+            </tr>
+            <tr data-test="member-row-2" data-name="bob" data-role="tester">
+              <td>Bob Martinez</td>
+              <td>Tester</td>
+              <td><span class="status-badge active">Active</span></td>
+            </tr>
+            <tr data-test="member-row-3" data-name="carol" data-role="developer">
+              <td>Carol Smith</td>
+              <td>Developer</td>
+              <td><span class="status-badge inactive">Inactive</span></td>
+            </tr>
+            <tr data-test="member-row-4" data-name="david" data-role="tester">
+              <td>David Lee</td>
+              <td>Tester</td>
+              <td><span class="status-badge active">Active</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p id="filter-result-message" class="message" aria-live="polite" data-test="filter-result-message"></p>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Single filter:</strong> Type "alice" in search or select "Admin" role</p>
+        <p style="font-size: 0.9rem;"><strong>Multiple filters:</strong> Filter by name AND role simultaneously</p>
+        <p style="font-size: 0.9rem;"><strong>Reset:</strong> Click "Reset Filters" to see all rows again</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-3.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-5.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 7: Pagination</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 7: Pagination</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Pagination</h2>
+      <p><strong>Learn:</strong> Navigate paginated content, handle table updates and page state changes.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Click Next button to go to next page</li>
+        <li>Table content updates with new rows</li>
+        <li>Page counter updates (Page X of Y)</li>
+        <li>Buttons disable at first/last page</li>
+        <li>Click Previous to go back</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <div id="pagination-content" data-test="pagination-content">
+          <table id="paginated-table" data-test="paginated-table" style="margin-bottom: 1rem;">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody id="pagination-body"></tbody>
+          </table>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span id="pagination-info" data-test="pagination-info">Page 1 of 5</span>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="prev-page" class="btn-secondary" data-test="prev-page">← Previous</button>
+            <button id="next-page" class="btn-primary" data-test="next-page">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test pageination:</strong> Click Next 3 times, verify page updates</p>
+        <p style="font-size: 0.9rem;"><strong>Test button states:</strong> Previous disabled on page 1, Next disabled on last page</p>
+        <p style="font-size: 0.9rem;"><strong>Test content:</strong> Verify different data on each page</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-6.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-8.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

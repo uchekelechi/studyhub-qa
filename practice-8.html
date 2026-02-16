@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 8: Accordion & Tabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 8: Accordion & Tabs</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Accordion & Tabs</h2>
+      <p><strong>Learn:</strong> Switching between tabs, toggling accordion sections, handling hidden/shown content.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Click tabs to switch content</li>
+        <li>Only active tab content is visible</li>
+        <li>Click accordion header to expand</li>
+        <li>Click again to collapse</li>
+        <li>Find elements inside hidden content after expanding</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-button active" data-test="tab-overview" data-tab-button="overview">Overview</button>
+            <button class="tab-button" data-test="tab-details" data-tab-button="details">Details</button>
+            <button class="tab-button" data-test="tab-settings" data-tab-button="settings">Settings</button>
+          </div>
+          <div class="tab-content">
+            <div id="tab-overview" class="tab-pane active" data-test="tab-pane-overview" data-tab-pane="overview">
+              <p>This is the overview tab with general information about the project.</p>
+            </div>
+            <div id="tab-details" class="tab-pane" data-test="tab-pane-details" data-tab-pane="details" style="display: none;">
+              <p>Detailed information goes here. <strong>Last updated:</strong> 2026-02-16</p>
+            </div>
+            <div id="tab-settings" class="tab-pane" data-test="tab-pane-settings" data-tab-pane="settings" style="display: none;">
+              <label><input type="checkbox" data-test="notify-setting"> Enable notifications</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" style="margin-top: 1.5rem;">
+          <div class="accordion-item">
+            <button class="accordion-header" data-test="accordion-header-1">▶ Expandable Section 1</button>
+            <div class="accordion-body" id="accordion-1" data-test="accordion-body-1" style="display: none;">
+              <p>Hidden content for section 1</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" data-test="accordion-header-2">▶ Expandable Section 2</button>
+            <div class="accordion-body" id="accordion-2" data-test="accordion-body-2" style="display: none;">
+              <p>Hidden content for section 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test tabs:</strong> Click each tab, verify content changes</p>
+        <p style="font-size: 0.9rem;"><strong>Test accordion:</strong> Click headers to expand/collapse sections</p>
+        <p style="font-size: 0.9rem;"><strong>Test visibility:</strong> Find elements only after expanding</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-7.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-9.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>

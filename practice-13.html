@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - Scenario 13: Keyboard Navigation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>StudyHub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-test="nav-home">Home</a></li>
+          <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
+          <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+      <h1>Scenario 13: Keyboard Navigation</h1>
+      <a href="practice.html" class="btn-secondary" data-test="back-button">← Back to Scenarios</a>
+    </div>
+
+    <section class="card">
+      <h2>Keyboard Navigation & Shortcuts</h2>
+      <p><strong>Learn:</strong> Testing keyboard event handling, arrow keys, Enter/Escape, accessible interactions.</p>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted);"><strong>What to test:</strong></p>
+      <ul>
+        <li>Use arrow keys to navigate items</li>
+        <li>Press Enter to select item</li>
+        <li>Press Escape to clear selection</li>
+        <li>Selected item is highlighted</li>
+        <li>Verify keyboard is received and processed</li>
+      </ul>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: var(--radius);">
+        <p style="margin-bottom: 1rem;">Try these keyboard shortcuts:</p>
+        <ul style="margin-bottom: 1rem;">
+          <li><kbd style="padding: 0.2rem 0.4rem; background: #f0f0f0; border-radius: 3px;">↑/↓</kbd> Navigate list items</li>
+          <li><kbd style="padding: 0.2rem 0.4rem; background: #f0f0f0; border-radius: 3px;">Enter</kbd> Select item</li>
+          <li><kbd style="padding: 0.2rem 0.4rem; background: #f0f0f0; border-radius: 3px;">Esc</kbd> Clear selection</li>
+        </ul>
+
+        <div id="keyboard-items-list" data-test="keyboard-items-list" style="border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+          <div class="keyboard-item" data-index="0" data-test="keyboard-item-0">🎯 Option 1: Testing Basics</div>
+          <div class="keyboard-item" data-index="1" data-test="keyboard-item-1">🔍 Option 2: Advanced Selectors</div>
+          <div class="keyboard-item" data-index="2" data-test="keyboard-item-2">⚡ Option 3: Performance Tips</div>
+          <div class="keyboard-item" data-index="3" data-test="keyboard-item-3">🛡️ Option 4: Reliability Patterns</div>
+        </div>
+
+        <p id="keyboard-selected" data-test="keyboard-selected" style="margin-top: 1rem; color: var(--text-muted);">Selected: None</p>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #f0f0f0; border-left: 4px solid var(--primary); border-radius: 4px;">
+        <p style="font-weight: 500; margin-bottom: 0.5rem;">💡 Test Examples:</p>
+        <p style="font-size: 0.9rem;"><strong>Test arrow keys:</strong> Press ↓ to move down, ↑ to move up</p>
+        <p style="font-size: 0.9rem;"><strong>Test selection:</strong> Navigate to item, press Enter to select</p>
+        <p style="font-size: 0.9rem;"><strong>Test keyboard events:</strong> Programmatically send keyboard events</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+      <a href="practice-12.html" class="btn-secondary" style="text-decoration: none;">← Previous</a>
+      <a href="practice-14.html" class="btn-primary" style="text-decoration: none;">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StudyHub</p>
+  </footer>
+</body>
+</html>
