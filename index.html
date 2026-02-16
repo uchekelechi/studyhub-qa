@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>StudyHub - Home</title>
+  <title>StudyHub - Master Test Automation with 14 Interactive Scenarios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn test automation with StudyHub: 14 interactive practice scenarios and 5 knowledge quizzes. Master Cypress, Playwright, and RobotFramework through hands-on examples.">
+  <meta name="keywords" content="test automation, QA training, Cypress, Playwright, RobotFramework, learning platform">
   <link rel="stylesheet" href="src/css/styles.css">
   <script defer src="src/js/main.js"></script>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <h1 id="site-title">StudyHub</h1>
+      <h1 id="site-title"><a href="index.html" data-test="nav-home" style="text-decoration: none; color: inherit;">StudyHub</a></h1>
       <nav>
         <ul>
-          <li><a href="index.html" data-test="nav-home">Home</a></li>
           <li><a href="practice.html" data-test="nav-practice">Practice</a></li>
           <li><a href="quiz.html" data-test="nav-quiz">Quiz</a></li>
         </ul>
@@ -22,90 +23,136 @@
   </header>
 
   <main class="page">
-    <div class="page-grid">
-      <section class="card" aria-label="welcome">
-        <h2>Welcome to StudyHub</h2>
-        <p>
-          This is a simple training website you can use to learn software testing and test automation.
-        </p>
-      </section>
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 1.5rem; border-radius: var(--radius); margin-bottom: 2rem; text-align: center;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700;">Master Test Automation</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">Learn to test like a professional with 14 interactive scenarios and 5 knowledge quizzes</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="practice.html" style="background: white; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: transform 0.2s;" data-test="hero-practice-btn">🚀 Start Practicing</a>
+        <a href="quiz.html" style="background: rgba(255,255,255,0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; border: 2px solid white; transition: background 0.2s;" data-test="hero-quiz-btn">📝 Test Your Knowledge</a>
+      </div>
+    </section>
 
-      <section class="card" aria-label="login">
-        <h2>Login</h2>
-        <form id="login-form" novalidate>
-          <div class="form-row">
-            <label for="login-email">Email</label>
-            <input
-              type="email"
-              id="login-email"
-              name="email"
-              placeholder="tester@example.com"
-              required
-            >
-          </div>
-          <div class="form-row">
-            <label for="login-password">Password</label>
-            <input
-              type="password"
-              id="login-password"
-              name="password"
-              minlength="6"
-              required
-            >
-          </div>
-          <button type="submit" id="login-button">Login</button>
-          <p id="login-message" class="message" aria-live="polite"></p>
-        </form>
-      </section>
-    </div>
+    <!-- Stats Section -->
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div class="card" style="text-align: center;">
+        <h3 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">14</h3>
+        <p style="color: var(--text-muted); margin: 0;"><strong>Practice Scenarios</strong></p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Hands-on examples covering visibility, forms, modals, filtering, async operations, sorting, pagination, accordions, notifications, wizards, file uploads, API simulation, keyboard navigation, and data grids</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <h3 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">5</h3>
+        <p style="color: var(--text-muted); margin: 0;"><strong>Knowledge Quizzes</strong></p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Test your understanding with 25 questions covering visibility & waits, form handling, table operations, UI interactions, and advanced topics</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <h3 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">∞</h3>
+        <p style="color: var(--text-muted); margin: 0;"><strong>Multi-Framework</strong></p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Learn with Cypress, Playwright, and RobotFramework. Examples provided for each framework</p>
+      </div>
+    </section>
 
-    <section class="card" aria-label="info">
-      <h2>Test Ideas</h2>
-      <ul id="test-ideas">
-        <li>Verify login success and error messages.</li>
-        <li>Check navigation links open the correct page.</li>
-        <li>Assert that the page title and headers are displayed.</li>
+    <!-- Key Features Section -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <h2>Why StudyHub?</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>✓ Real-World Patterns:</strong> Practice scenarios mirror actual web application behaviors</li>
+        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>✓ Test-Friendly Design:</strong> Semantic HTML and consistent data-test selectors for reliable automation</li>
+        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>✓ Accessibility First:</strong> WCAG-compliant markup with ARIA attributes and keyboard navigation</li>
+        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>✓ Structured Learning:</strong> Progress from basics to advanced test automation concepts</li>
+        <li style="padding: 0.75rem 0;"><strong>✓ Documentation:</strong> Comprehensive guides for Cypress, Playwright, and RobotFramework</li>
       </ul>
     </section>
 
-    <section class="card" aria-label="modules">
-      <h2>Learning Modules</h2>
-      <ol>
-        <li>Introduction to software testing.</li>
-        <li>Manual testing basics.</li>
-        <li>Writing your first test cases.</li>
-        <li>Introduction to test automation.</li>
-        <li>Working with locators and selectors.</li>
-      </ol>
+    <!-- Login Section (for testing) -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <h2>Demo Login</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Try the login form below to practice testing form validation:</p>
+      <form id="login-form" novalidate>
+        <div class="form-row">
+          <label for="login-email">Email</label>
+          <input
+            type="email"
+            id="login-email"
+            name="email"
+            placeholder="tester@example.com"
+            data-test="login-email"
+            required
+          >
+        </div>
+        <div class="form-row">
+          <label for="login-password">Password</label>
+          <input
+            type="password"
+            id="login-password"
+            name="password"
+            minlength="6"
+            placeholder="min 6 characters"
+            data-test="login-password"
+            required
+          >
+        </div>
+        <button type="submit" id="login-button" data-test="login-button">Login</button>
+        <p id="login-message" class="message" aria-live="polite" data-test="login-message"></p>
+      </form>
     </section>
 
-    <section class="card" aria-label="roadmap">
-      <h2>Roadmap</h2>
-      <p>
-        Below is a simple roadmap for learners. You can use it to practice checking text, lists and section headings in automated tests.
-      </p>
-      <ul>
-        <li>Week 1: Fundamentals of QA.</li>
-        <li>Week 2: Web UI elements and basic interactions.</li>
-        <li>Week 3: Test automation tools overview.</li>
-        <li>Week 4: Build and run your own automated tests.</li>
-        <li>Week 5: Reporting and communicating test results.</li>
-      </ul>
+    <!-- Learning Path Section -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <h2>Your Learning Path</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div style="padding: 1rem; border: 2px solid var(--primary); border-radius: var(--radius);">
+          <h3 style="color: var(--primary); margin-top: 0;">Foundation (Week 1-2)</h3>
+          <ul style="font-size: 0.9rem; margin: 0.5rem 0;">
+            <li>Web UI elements and selectors</li>
+            <li>Form interactions and validation</li>
+            <li>Modal and dialog handling</li>
+          </ul>
+        </div>
+        <div style="padding: 1rem; border: 2px solid var(--primary); border-radius: var(--radius);">
+          <h3 style="color: var(--primary); margin-top: 0;">Intermediate (Week 3-4)</h3>
+          <ul style="font-size: 0.9rem; margin: 0.5rem 0;">
+            <li>Table operations and filtering</li>
+            <li>Asynchronous operations</li>
+            <li>Dynamic content handling</li>
+          </ul>
+        </div>
+        <div style="padding: 1rem; border: 2px solid var(--primary); border-radius: var(--radius);">
+          <h3 style="color: var(--primary); margin-top: 0;">Advanced (Week 5+)</h3>
+          <ul style="font-size: 0.9rem; margin: 0.5rem 0;">
+            <li>File uploads and API testing</li>
+            <li>Keyboard navigation</li>
+            <li>Complex user interactions</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="card" aria-label="faq">
-      <h2>FAQ</h2>
-      <h3>Do I need coding experience?</h3>
-      <p>No, this course starts from the basics and introduces code step by step.</p>
-      <h3>Which tools will we use?</h3>
-      <p>We will start with browser developer tools and then move to a test automation framework.</p>
-      <h3>How much time should I reserve?</h3>
-      <p>Plan for 3–5 hours per week for practice and exercises.</p>
+    <!-- FAQ Section -->
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="margin-bottom: 0.5rem;">❓ Do I need coding experience?</h3>
+        <p style="margin: 0; color: var(--text-muted);">No! StudyHub starts from the basics. You'll learn JavaScript and testing concepts step by step through hands-on practice.</p>
+      </div>
+      <div style="margin-bottom: 1.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+        <h3 style="margin-bottom: 0.5rem;">❓ Which frameworks are covered?</h3>
+        <p style="margin: 0; color: var(--text-muted);">We provide examples for Cypress, Playwright, and RobotFramework. Each scenario includes test code for all three frameworks.</p>
+      </div>
+      <div style="margin-bottom: 1.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+        <h3 style="margin-bottom: 0.5rem;">❓ How long does this take?</h3>
+        <p style="margin: 0; color: var(--text-muted);">Plan for 5-10 hours total. You can work through scenarios at your own pace and revisit them as needed.</p>
+      </div>
+      <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+        <h3 style="margin-bottom: 0.5rem;">❓ Can I use this for test automation interviews?</h3>
+        <p style="margin: 0; color: var(--text-muted);">Absolutely! These scenarios cover the exact patterns you'll encounter in real-world testing and are perfect for interview preparation.</p>
+      </div>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2026 StudyHub</p>
+    <p>© 2026 StudyHub - Master Test Automation</p>
   </footer>
 </body>
 </html>
